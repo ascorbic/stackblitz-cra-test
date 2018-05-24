@@ -1,0 +1,26 @@
+.commonName {
+    margin-bottom: 0;
+}
+
+.latinName {
+    font-style: italic;
+    font-size: inherit;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.conservationStatus {
+    font-size: inherit;
+    transform-origin: top left;
+    transform: rotate(30deg) translate(110px, -70px);
+    background: white;
+    display: inline-block;
+    margin: 0;
+    border: 1px black solid;
+    text-align: center;
+    width: 160px;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-name: anim-open;
+    transition-timing-function: ease-in;
+}

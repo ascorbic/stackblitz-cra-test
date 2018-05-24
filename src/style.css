@@ -1,0 +1,111 @@
+* {
+    font-family: Lato;
+}
+
+@keyframes anim-open {
+    0% {
+        opacity: 0;
+        transform: scale3d(2, 2, 2) rotate(30deg) translate(110px, -70px);
+    }
+    70% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1) rotate(30deg) translate(110px, -70px);
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale3d(1.02, 1.02, 1.02) rotate(30deg)
+            translate(110px, -70px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1) rotate(30deg) translate(110px, -70px);
+    }
+}
+
+@keyframes lightbox-open {
+    0% {
+        opacity: 0;
+        transform: scale3d(1.1, 1.1, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+#lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-name: lightbox-open;
+}
+
+#lightbox img {
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+img {
+    display: block;
+    min-height: 150px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 200px;
+    margin-right: 30px;
+}
+
+li {
+    cursor: pointer;
+    padding: 5px;
+    background: white;
+}
+
+li:nth-child(odd) {
+    background-color: black;
+    color: white;
+}
+
+li.selected::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: black;
+    transform: rotate(45deg) translate(10px, -3px);
+    float: right;
+    z-index: -1;
+}
+
+#animals {
+    display: flex;
+}
+
+li:hover {
+    background: repeating-linear-gradient(
+        to right,
+        black,
+        black 10px,
+        white 10px,
+        white 20px
+    );
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+    color: white;
+}
+
+#detail {
+    flex: 1;
+}
